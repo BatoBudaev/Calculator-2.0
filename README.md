@@ -1,4 +1,4 @@
-# Calculator
+# Calculator 2.0
 
 Вторая версия калькулятора https://github.com/BatoBudaev/Calculator на языке C++ и с применеием паттерна MVC.
 ![image info](./misc/1.png)
