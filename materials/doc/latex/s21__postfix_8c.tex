@@ -1,0 +1,103 @@
+\hypertarget{s21__postfix_8c}{}\doxysection{/home/\+Nebomoe/\+CLion\+Projects/\+C7\+\_\+\+Smart\+Calc\+\_\+v1.0-\/1/src/s21\+\_\+postfix.c File Reference}
+\label{s21__postfix_8c}\index{/home/Nebomoe/CLionProjects/C7\_SmartCalc\_v1.0-\/1/src/s21\_postfix.c@{/home/Nebomoe/CLionProjects/C7\_SmartCalc\_v1.0-\/1/src/s21\_postfix.c}}
+
+
+Реализация функций для работы с постфиксными выражениями.  
+
+
+{\ttfamily \#include \char`\"{}s21\+\_\+postfix.\+h\char`\"{}}\newline
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{s21__postfix_8c_a52a875aff8e5dacc864dc3d6c31818f5}{is\+Operator}} (char c)
+\begin{DoxyCompactList}\small\item\em Проверяет, является ли символ оператором. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{s21__postfix_8c_ac653f0f38b8cef61268916fcc3294298}{get\+Priority}} (char c)
+\begin{DoxyCompactList}\small\item\em Получает приоритет оператора. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{s21__postfix_8c_a80f8600a650150442c74f53b41a92e26}{do\+Infix\+To\+Postfix}} (const char $\ast$expression, char $\ast$postfix)
+\begin{DoxyCompactList}\small\item\em Преобразует инфиксное выражение в постфиксное выражение. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{s21__postfix_8c_a7fb19888767f3fbaa18362d0c66071a4}{calculate\+Postfix}} (char $\ast$postfix, double x)
+\begin{DoxyCompactList}\small\item\em Вычисляет значение постфиксного выражения, зависящее от переменной x. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Реализация функций для работы с постфиксными выражениями. 
+
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{s21__postfix_8c_a7fb19888767f3fbaa18362d0c66071a4}\label{s21__postfix_8c_a7fb19888767f3fbaa18362d0c66071a4}} 
+\index{s21\_postfix.c@{s21\_postfix.c}!calculatePostfix@{calculatePostfix}}
+\index{calculatePostfix@{calculatePostfix}!s21\_postfix.c@{s21\_postfix.c}}
+\doxysubsubsection{\texorpdfstring{calculatePostfix()}{calculatePostfix()}}
+{\footnotesize\ttfamily double calculate\+Postfix (\begin{DoxyParamCaption}\item[{char $\ast$}]{postfix,  }\item[{double}]{x }\end{DoxyParamCaption})}
+
+
+
+Вычисляет значение постфиксного выражения, зависящее от переменной x. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em postfix} & Постфиксное выражение. \\
+\hline
+{\em x} & Значение переменной x. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Результат вычисления. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{s21__postfix_8c_a80f8600a650150442c74f53b41a92e26}\label{s21__postfix_8c_a80f8600a650150442c74f53b41a92e26}} 
+\index{s21\_postfix.c@{s21\_postfix.c}!doInfixToPostfix@{doInfixToPostfix}}
+\index{doInfixToPostfix@{doInfixToPostfix}!s21\_postfix.c@{s21\_postfix.c}}
+\doxysubsubsection{\texorpdfstring{doInfixToPostfix()}{doInfixToPostfix()}}
+{\footnotesize\ttfamily int do\+Infix\+To\+Postfix (\begin{DoxyParamCaption}\item[{const char $\ast$}]{expression,  }\item[{char $\ast$}]{postfix }\end{DoxyParamCaption})}
+
+
+
+Преобразует инфиксное выражение в постфиксное выражение. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em expression} & Инфиксное выражение. \\
+\hline
+{\em postfix} & Буфер для хранения постфиксного выражения. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+0 в случае успешного преобразования, -\/1 -\/ при ошибке. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{s21__postfix_8c_ac653f0f38b8cef61268916fcc3294298}\label{s21__postfix_8c_ac653f0f38b8cef61268916fcc3294298}} 
+\index{s21\_postfix.c@{s21\_postfix.c}!getPriority@{getPriority}}
+\index{getPriority@{getPriority}!s21\_postfix.c@{s21\_postfix.c}}
+\doxysubsubsection{\texorpdfstring{getPriority()}{getPriority()}}
+{\footnotesize\ttfamily int get\+Priority (\begin{DoxyParamCaption}\item[{char}]{c }\end{DoxyParamCaption})}
+
+
+
+Получает приоритет оператора. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em c} & Оператор. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Приоритет оператора. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{s21__postfix_8c_a52a875aff8e5dacc864dc3d6c31818f5}\label{s21__postfix_8c_a52a875aff8e5dacc864dc3d6c31818f5}} 
+\index{s21\_postfix.c@{s21\_postfix.c}!isOperator@{isOperator}}
+\index{isOperator@{isOperator}!s21\_postfix.c@{s21\_postfix.c}}
+\doxysubsubsection{\texorpdfstring{isOperator()}{isOperator()}}
+{\footnotesize\ttfamily int is\+Operator (\begin{DoxyParamCaption}\item[{char}]{c }\end{DoxyParamCaption})}
+
+
+
+Проверяет, является ли символ оператором. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em c} & Символ для проверки. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+1, если символ -\/ оператор, 0 -\/ в противном случае. 
+\end{DoxyReturn}

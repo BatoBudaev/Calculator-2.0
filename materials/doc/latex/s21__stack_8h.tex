@@ -1,0 +1,199 @@
+\hypertarget{s21__stack_8h}{}\doxysection{/home/\+Nebomoe/\+CLion\+Projects/\+C7\+\_\+\+Smart\+Calc\+\_\+v1.0-\/1/src/s21\+\_\+stack.h File Reference}
+\label{s21__stack_8h}\index{/home/Nebomoe/CLionProjects/C7\_SmartCalc\_v1.0-\/1/src/s21\_stack.h@{/home/Nebomoe/CLionProjects/C7\_SmartCalc\_v1.0-\/1/src/s21\_stack.h}}
+
+
+Определение структуры стека и функций для работы с ним.  
+
+
+\doxysubsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structStack}{Stack}}
+\begin{DoxyCompactList}\small\item\em Структура, представляющая стек для хранения символов и чисел. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{s21__stack_8h_a0592dba56693fad79136250c11e5a7fe}\label{s21__stack_8h_a0592dba56693fad79136250c11e5a7fe}} 
+\#define {\bfseries MAX\+\_\+\+SIZE}~255
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{s21__stack_8h_aade9c662f969998990f3346095e65570}{init\+Stack}} (\mbox{\hyperlink{structStack}{Stack}} $\ast$stack)
+\begin{DoxyCompactList}\small\item\em Инициализирует стек, устанавливая вершину на -\/1. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{s21__stack_8h_ad698665e5524cf4a5e0492eed5f80211}{is\+Empty}} (\mbox{\hyperlink{structStack}{Stack}} $\ast$stack)
+\begin{DoxyCompactList}\small\item\em Проверяет, является ли стек пустым. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{s21__stack_8h_aba0a6cf9a59c3a51005af1c323d1d5f9}{push\+Char}} (\mbox{\hyperlink{structStack}{Stack}} $\ast$stack, char c)
+\begin{DoxyCompactList}\small\item\em Добавляет символ в стек. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{s21__stack_8h_adde39f4ad828d9454dcc3a8cc8b1b59e}{push\+Double}} (\mbox{\hyperlink{structStack}{Stack}} $\ast$stack, double d)
+\begin{DoxyCompactList}\small\item\em Добавляет число с плавающей запятой в стек. \end{DoxyCompactList}\item 
+char \mbox{\hyperlink{s21__stack_8h_a4c957a64c205414d59d13638b9ce5944}{pop\+Char}} (\mbox{\hyperlink{structStack}{Stack}} $\ast$stack)
+\begin{DoxyCompactList}\small\item\em Извлекает символ из вершины стека. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{s21__stack_8h_aea0ac2284aed61765d8a222547c99247}{pop\+Double}} (\mbox{\hyperlink{structStack}{Stack}} $\ast$stack)
+\begin{DoxyCompactList}\small\item\em Извлекает число с плавающей запятой из вершины стека. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Определение структуры стека и функций для работы с ним. 
+
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{s21__stack_8h_aade9c662f969998990f3346095e65570}\label{s21__stack_8h_aade9c662f969998990f3346095e65570}} 
+\index{s21\_stack.h@{s21\_stack.h}!initStack@{initStack}}
+\index{initStack@{initStack}!s21\_stack.h@{s21\_stack.h}}
+\doxysubsubsection{\texorpdfstring{initStack()}{initStack()}}
+{\footnotesize\ttfamily void init\+Stack (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structStack}{Stack}} $\ast$}]{stack }\end{DoxyParamCaption})}
+
+
+
+Инициализирует стек, устанавливая вершину на -\/1. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em stack} & Указатель на структуру стека.\\
+\hline
+\end{DoxyParams}
+
+
+
+\begin{DoxyParams}{Parameters}
+{\em stack} & Указатель на структуру стека. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{s21__stack_8h_ad698665e5524cf4a5e0492eed5f80211}\label{s21__stack_8h_ad698665e5524cf4a5e0492eed5f80211}} 
+\index{s21\_stack.h@{s21\_stack.h}!isEmpty@{isEmpty}}
+\index{isEmpty@{isEmpty}!s21\_stack.h@{s21\_stack.h}}
+\doxysubsubsection{\texorpdfstring{isEmpty()}{isEmpty()}}
+{\footnotesize\ttfamily int is\+Empty (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structStack}{Stack}} $\ast$}]{stack }\end{DoxyParamCaption})}
+
+
+
+Проверяет, является ли стек пустым. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em stack} & Указатель на структуру стека. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+1, если стек пуст, 0 -\/ в противном случае.
+\end{DoxyReturn}
+
+
+
+\begin{DoxyParams}{Parameters}
+{\em stack} & Указатель на структуру стека. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+1, если стек пуст, 0 -\/ в противном случае. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{s21__stack_8h_a4c957a64c205414d59d13638b9ce5944}\label{s21__stack_8h_a4c957a64c205414d59d13638b9ce5944}} 
+\index{s21\_stack.h@{s21\_stack.h}!popChar@{popChar}}
+\index{popChar@{popChar}!s21\_stack.h@{s21\_stack.h}}
+\doxysubsubsection{\texorpdfstring{popChar()}{popChar()}}
+{\footnotesize\ttfamily char pop\+Char (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structStack}{Stack}} $\ast$}]{stack }\end{DoxyParamCaption})}
+
+
+
+Извлекает символ из вершины стека. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em stack} & Указатель на структуру стека. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Извлеченный символ.
+\end{DoxyReturn}
+
+
+
+\begin{DoxyParams}{Parameters}
+{\em stack} & Указатель на структуру стека. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Извлеченный символ. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{s21__stack_8h_aea0ac2284aed61765d8a222547c99247}\label{s21__stack_8h_aea0ac2284aed61765d8a222547c99247}} 
+\index{s21\_stack.h@{s21\_stack.h}!popDouble@{popDouble}}
+\index{popDouble@{popDouble}!s21\_stack.h@{s21\_stack.h}}
+\doxysubsubsection{\texorpdfstring{popDouble()}{popDouble()}}
+{\footnotesize\ttfamily double pop\+Double (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structStack}{Stack}} $\ast$}]{stack }\end{DoxyParamCaption})}
+
+
+
+Извлекает число с плавающей запятой из вершины стека. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em stack} & Указатель на структуру стека. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Извлеченное число с плавающей запятой.
+\end{DoxyReturn}
+
+
+
+\begin{DoxyParams}{Parameters}
+{\em stack} & Указатель на структуру стека. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Извлеченное число с плавающей запятой. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{s21__stack_8h_aba0a6cf9a59c3a51005af1c323d1d5f9}\label{s21__stack_8h_aba0a6cf9a59c3a51005af1c323d1d5f9}} 
+\index{s21\_stack.h@{s21\_stack.h}!pushChar@{pushChar}}
+\index{pushChar@{pushChar}!s21\_stack.h@{s21\_stack.h}}
+\doxysubsubsection{\texorpdfstring{pushChar()}{pushChar()}}
+{\footnotesize\ttfamily void push\+Char (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structStack}{Stack}} $\ast$}]{stack,  }\item[{char}]{c }\end{DoxyParamCaption})}
+
+
+
+Добавляет символ в стек. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em stack} & Указатель на структуру стека. \\
+\hline
+{\em c} & Символ, который нужно добавить в стек.\\
+\hline
+\end{DoxyParams}
+
+
+
+\begin{DoxyParams}{Parameters}
+{\em stack} & Указатель на структуру стека. \\
+\hline
+{\em c} & Символ, который нужно добавить в стек. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{s21__stack_8h_adde39f4ad828d9454dcc3a8cc8b1b59e}\label{s21__stack_8h_adde39f4ad828d9454dcc3a8cc8b1b59e}} 
+\index{s21\_stack.h@{s21\_stack.h}!pushDouble@{pushDouble}}
+\index{pushDouble@{pushDouble}!s21\_stack.h@{s21\_stack.h}}
+\doxysubsubsection{\texorpdfstring{pushDouble()}{pushDouble()}}
+{\footnotesize\ttfamily void push\+Double (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structStack}{Stack}} $\ast$}]{stack,  }\item[{double}]{d }\end{DoxyParamCaption})}
+
+
+
+Добавляет число с плавающей запятой в стек. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em stack} & Указатель на структуру стека. \\
+\hline
+{\em d} & Число с плавающей запятой, которое нужно добавить в стек.\\
+\hline
+\end{DoxyParams}
+
+
+
+\begin{DoxyParams}{Parameters}
+{\em stack} & Указатель на структуру стека. \\
+\hline
+{\em d} & Число с плавающей запятой, которое нужно добавить в стек. \\
+\hline
+\end{DoxyParams}

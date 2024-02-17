@@ -1,0 +1,549 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Credit</class>
+ <widget class="QDialog" name="Credit">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>612</width>
+    <height>590</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Credit</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">QWidget {
+    background-color: #212c3d;
+}</string>
+  </property>
+  <widget class="QLabel" name="label">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>90</y>
+     <width>131</width>
+     <height>51</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QLabel {
+    background-color: #3a4e63;
+    border: 1px solid #2c3e50;
+    color: #ecf0f1;
+    padding: 10px;
+    font-size: 14px;
+    height: 60px;
+}</string>
+   </property>
+   <property name="text">
+    <string>Сумма кредита</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="creditSumLine">
+   <property name="geometry">
+    <rect>
+     <x>150</x>
+     <y>90</y>
+     <width>451</width>
+     <height>51</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QLineEdit {
+    background-color: #3a4e63;
+    border: 1px solid #2c3e50;
+    color: #ecf0f1;
+    padding: 10px;
+    font-size: 14px;
+    height: 60px;
+}</string>
+   </property>
+   <property name="text">
+    <string>100000</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_2">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>19</y>
+     <width>591</width>
+     <height>61</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QLabel {
+    background-color: #3a4e63;
+    border: 1px solid #2c3e50;
+    color: #ecf0f1;
+    padding: 10px;
+    font-size: 20px;
+    height: 70px;
+}</string>
+   </property>
+   <property name="text">
+    <string>Кредитный калькулятор</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="creditTermLine">
+   <property name="geometry">
+    <rect>
+     <x>150</x>
+     <y>150</y>
+     <width>221</width>
+     <height>51</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QLineEdit {
+    background-color: #3a4e63;
+    border: 1px solid #2c3e50;
+    color: #ecf0f1;
+    padding: 10px;
+    font-size: 14px;
+    height: 60px;
+}</string>
+   </property>
+   <property name="text">
+    <string>1</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_3">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>150</y>
+     <width>131</width>
+     <height>51</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QLabel {
+    background-color: #3a4e63;
+    border: 1px solid #2c3e50;
+    color: #ecf0f1;
+    padding: 10px;
+    font-size: 14px;
+    height: 60px;
+}</string>
+   </property>
+   <property name="text">
+    <string>Срок кредита</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_4">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>210</y>
+     <width>131</width>
+     <height>51</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QLabel {
+    background-color: #3a4e63;
+    border: 1px solid #2c3e50;
+    color: #ecf0f1;
+    padding: 10px;
+    font-size: 12px;
+    height: 60px;
+}</string>
+   </property>
+   <property name="text">
+    <string>Процентная ставка</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="percentLine">
+   <property name="geometry">
+    <rect>
+     <x>150</x>
+     <y>210</y>
+     <width>221</width>
+     <height>51</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QLineEdit {
+    background-color: #3a4e63;
+    border: 1px solid #2c3e50;
+    color: #ecf0f1;
+    padding: 10px;
+    font-size: 14px;
+    height: 60px;
+}</string>
+   </property>
+   <property name="text">
+    <string>12</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_5">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>270</y>
+     <width>131</width>
+     <height>51</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QLabel {
+    background-color: #3a4e63;
+    border: 1px solid #2c3e50;
+    color: #ecf0f1;
+    padding: 10px;
+    font-size: 14px;
+    height: 60px;
+}</string>
+   </property>
+   <property name="text">
+    <string>Тип  платежей</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+   </property>
+  </widget>
+  <widget class="QComboBox" name="comboBox">
+   <property name="geometry">
+    <rect>
+     <x>380</x>
+     <y>150</y>
+     <width>221</width>
+     <height>51</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QComboBox {
+    background-color: #3a4e63;
+    border: 1px solid #2c3e50;
+    color: #ecf0f1;
+    padding: 10px;
+    font-size: 14px;
+    height: 60px;
+    selection-background-color: #3498db;
+    selection-color: #ffffff;
+}
+
+QComboBox::drop-down {
+    subcontrol-origin: padding;
+    subcontrol-position: top right;
+    width: 20px;
+    border-left: 1px solid #2c3e50;
+    background: #3a4e63;
+}
+
+QComboBox QAbstractItemView {
+    border: 1px solid #2c3e50;
+    selection-background-color: #3498db;
+    selection-color: #ffffff;
+}
+
+QComboBox QAbstractItemView::item {
+    padding: 6px;
+	color: #bdc3c7;
+}
+
+QComboBox QAbstractItemView::item:selected {
+    background-color: #3498db;
+    color: #ffffff;
+}
+</string>
+   </property>
+   <item>
+    <property name="text">
+     <string>Лет</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>Месяцев</string>
+    </property>
+   </item>
+  </widget>
+  <widget class="QLabel" name="label_6">
+   <property name="geometry">
+    <rect>
+     <x>380</x>
+     <y>210</y>
+     <width>51</width>
+     <height>51</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QLabel {
+    background-color: #3a4e63;
+    border: 1px solid #2c3e50;
+    color: #ecf0f1;
+    padding: 10px;
+    font-size: 20px;
+    height: 60px;
+}</string>
+   </property>
+   <property name="text">
+    <string>%</string>
+   </property>
+  </widget>
+  <widget class="QRadioButton" name="radioButton_1">
+   <property name="geometry">
+    <rect>
+     <x>150</x>
+     <y>270</y>
+     <width>221</width>
+     <height>51</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QRadioButton {
+	background-color: #3a4e63;
+    spacing: 10px;
+    color: #ecf0f1;
+    font-size: 14px;
+	padding: 8px;
+}
+
+QRadioButton::indicator {
+    width: 20px;
+    height: 20px;
+}</string>
+   </property>
+   <property name="text">
+    <string>Аннуитетные</string>
+   </property>
+   <property name="checked">
+    <bool>true</bool>
+   </property>
+  </widget>
+  <widget class="QRadioButton" name="radioButton_2">
+   <property name="geometry">
+    <rect>
+     <x>380</x>
+     <y>270</y>
+     <width>221</width>
+     <height>51</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QRadioButton {
+	background-color: #3a4e63;
+    spacing: 10px;
+    color: #ecf0f1;
+    font-size: 14px;
+	padding: 8px;
+}
+
+QRadioButton::indicator {
+    width: 20px;
+    height: 20px;
+}</string>
+   </property>
+   <property name="text">
+    <string>Дифференцированные</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="pushButton">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>330</y>
+     <width>221</width>
+     <height>51</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QPushButton {
+    background-color: #3498db;
+    border: 1px solid #1f2b37;
+    color: #ecf0f1;
+    padding: 10px;
+    font-size: 18px;
+    width: 80px;
+    height: 80px;
+}
+
+QPushButton:hover {
+    background-color: #2980b9;
+}
+
+QPushButton:pressed {
+    background-color: #1f618d;
+}
+</string>
+   </property>
+   <property name="text">
+    <string>Рассчитать</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_7">
+   <property name="geometry">
+    <rect>
+     <x>80</x>
+     <y>410</y>
+     <width>171</width>
+     <height>51</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QLabel {
+    background-color: #3a4e63;
+    border: 1px solid #2c3e50;
+    color: #ecf0f1;
+    padding: 10px;
+    font-size: 14px;
+    height: 60px;
+}</string>
+   </property>
+   <property name="text">
+    <string>Ежемесячный платёж</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="monthlyPaymentLabel">
+   <property name="geometry">
+    <rect>
+     <x>260</x>
+     <y>410</y>
+     <width>271</width>
+     <height>51</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QLabel {
+    background-color: #3a4e63;
+    border: 1px solid #2c3e50;
+    color: #ecf0f1;
+    padding: 10px;
+    font-size: 14px;
+    height: 60px;
+}</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_9">
+   <property name="geometry">
+    <rect>
+     <x>80</x>
+     <y>470</y>
+     <width>171</width>
+     <height>51</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QLabel {
+    background-color: #3a4e63;
+    border: 1px solid #2c3e50;
+    color: #ecf0f1;
+    padding: 10px;
+    font-size: 13px;
+    height: 60px;
+}</string>
+   </property>
+   <property name="text">
+    <string>Начисленные проценты</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_10">
+   <property name="geometry">
+    <rect>
+     <x>80</x>
+     <y>530</y>
+     <width>171</width>
+     <height>51</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QLabel {
+    background-color: #3a4e63;
+    border: 1px solid #2c3e50;
+    color: #ecf0f1;
+    padding: 10px;
+    font-size: 14px;
+    height: 60px;
+}</string>
+   </property>
+   <property name="text">
+    <string>Долг + проценты</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="percentChargesLabel">
+   <property name="geometry">
+    <rect>
+     <x>260</x>
+     <y>470</y>
+     <width>271</width>
+     <height>51</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QLabel {
+    background-color: #3a4e63;
+    border: 1px solid #2c3e50;
+    color: #ecf0f1;
+    padding: 10px;
+    font-size: 14px;
+    height: 60px;
+}</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QLabel" name="debtAndPercentLabel">
+   <property name="geometry">
+    <rect>
+     <x>260</x>
+     <y>530</y>
+     <width>271</width>
+     <height>51</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QLabel {
+    background-color: #3a4e63;
+    border: 1px solid #2c3e50;
+    color: #ecf0f1;
+    padding: 10px;
+    font-size: 14px;
+    height: 60px;
+}</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

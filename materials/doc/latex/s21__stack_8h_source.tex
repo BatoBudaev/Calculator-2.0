@@ -1,0 +1,37 @@
+\hypertarget{s21__stack_8h_source}{}\doxysection{s21\+\_\+stack.\+h}
+\label{s21__stack_8h_source}\index{/home/Nebomoe/CLionProjects/C7\_SmartCalc\_v1.0-\/1/src/s21\_stack.h@{/home/Nebomoe/CLionProjects/C7\_SmartCalc\_v1.0-\/1/src/s21\_stack.h}}
+\mbox{\hyperlink{s21__stack_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ C7\_SMARTCALC\_V1\_0\_1\_S21\_STACK\_H}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ C7\_SMARTCALC\_V1\_0\_1\_S21\_STACK\_H}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#ifdef\ \_\_cplusplus}}
+\DoxyCodeLine{00005\ \textcolor{keyword}{extern}\ \textcolor{stringliteral}{"{}C"{}}\ \{}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00007\ }
+\DoxyCodeLine{00012\ \textcolor{preprocessor}{\#define\ MAX\_SIZE\ 255}}
+\DoxyCodeLine{00013\ }
+\DoxyCodeLine{00017\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }\{}
+\DoxyCodeLine{00018\ \ \ \ \ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{structdata}{data}}[MAX\_SIZE];\ }
+\DoxyCodeLine{00019\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{structStack_af93f4f37fc2ad9c37af4a715423b110c}{top}};\ }
+\DoxyCodeLine{00020\ \}\ \mbox{\hyperlink{structStack}{Stack}};}
+\DoxyCodeLine{00021\ }
+\DoxyCodeLine{00027\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{s21__stack_8h_aade9c662f969998990f3346095e65570}{initStack}}(\mbox{\hyperlink{structStack}{Stack}}\ *stack);}
+\DoxyCodeLine{00028\ }
+\DoxyCodeLine{00035\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{s21__stack_8h_ad698665e5524cf4a5e0492eed5f80211}{isEmpty}}(\mbox{\hyperlink{structStack}{Stack}}\ *stack);}
+\DoxyCodeLine{00036\ }
+\DoxyCodeLine{00043\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{s21__stack_8h_aba0a6cf9a59c3a51005af1c323d1d5f9}{pushChar}}(\mbox{\hyperlink{structStack}{Stack}}\ *stack,\ \textcolor{keywordtype}{char}\ c);}
+\DoxyCodeLine{00044\ }
+\DoxyCodeLine{00051\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{s21__stack_8h_adde39f4ad828d9454dcc3a8cc8b1b59e}{pushDouble}}(\mbox{\hyperlink{structStack}{Stack}}\ *stack,\ \textcolor{keywordtype}{double}\ d);}
+\DoxyCodeLine{00052\ }
+\DoxyCodeLine{00059\ \textcolor{keywordtype}{char}\ \mbox{\hyperlink{s21__stack_8h_a4c957a64c205414d59d13638b9ce5944}{popChar}}(\mbox{\hyperlink{structStack}{Stack}}\ *stack);}
+\DoxyCodeLine{00060\ }
+\DoxyCodeLine{00067\ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{s21__stack_8h_aea0ac2284aed61765d8a222547c99247}{popDouble}}(\mbox{\hyperlink{structStack}{Stack}}\ *stack);}
+\DoxyCodeLine{00068\ }
+\DoxyCodeLine{00069\ \textcolor{preprocessor}{\#ifdef\ \_\_cplusplus}}
+\DoxyCodeLine{00070\ \}}
+\DoxyCodeLine{00071\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00072\ }
+\DoxyCodeLine{00073\ \textcolor{preprocessor}{\#endif\ \ }\textcolor{comment}{//\ C7\_SMARTCALC\_V1\_0\_1\_S21\_STACK\_H}}
+
+\end{DoxyCode}

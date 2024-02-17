@@ -1,0 +1,266 @@
+\hypertarget{s21__bank_8c}{}\doxysection{/home/\+Nebomoe/\+CLion\+Projects/\+C7\+\_\+\+Smart\+Calc\+\_\+v1.0-\/1/src/s21\+\_\+bank.c File Reference}
+\label{s21__bank_8c}\index{/home/Nebomoe/CLionProjects/C7\_SmartCalc\_v1.0-\/1/src/s21\_bank.c@{/home/Nebomoe/CLionProjects/C7\_SmartCalc\_v1.0-\/1/src/s21\_bank.c}}
+
+
+Функции для работы с банковскими расчетами.  
+
+
+{\ttfamily \#include \char`\"{}s21\+\_\+bank.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}s21\+\_\+postfix.\+h\char`\"{}}\newline
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+double \mbox{\hyperlink{s21__bank_8c_aa768aabab02a59c871b1337162489f6c}{calculate\+Annuity}} (double credit\+Sum, double percent, int months)
+\begin{DoxyCompactList}\small\item\em Рассчитывает аннуитетный платеж для кредита. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{s21__bank_8c_a25bbc95b228e6ffd0ae49faa8baa0faf}{calculate\+Overpayment}} (double total\+Payment, double credit\+Sum)
+\begin{DoxyCompactList}\small\item\em Рассчитывает переплату по кредиту. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{s21__bank_8c_afd114b0fb7312d088929849f1963882b}{calculate\+Differentiated}} (double credit\+Sum, double percent, int months, int current\+Month)
+\begin{DoxyCompactList}\small\item\em Рассчитывает дифференцированный платеж для кредита. \end{DoxyCompactList}\item 
+long double \mbox{\hyperlink{s21__bank_8c_a043a9c33b7a1abd8ad2a52fef2858637}{calculate\+Interest}} (long double balance, double rate, int days, int days\+In\+Year)
+\begin{DoxyCompactList}\small\item\em Рассчитывает начисленные проценты для заданного баланса. \end{DoxyCompactList}\item 
+long double \mbox{\hyperlink{s21__bank_8c_aa143449295ffcbcb4914d8df1f30c146}{calculate\+Tax}} (long double income, long double untaxed\+Income, double tax\+Rate)
+\begin{DoxyCompactList}\small\item\em Рассчитывает сумму налога на начисленные проценты. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{s21__bank_8c_ae2f7c9a7e17225bac3e3f9a506b8a829}{is\+Leap\+Year}} (int year)
+\begin{DoxyCompactList}\small\item\em Проверяет, является ли заданный год високосным. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{s21__bank_8c_a8cdc3c1eec21aafc95b9cc088133f396}{get\+Days\+In\+Month}} (int year, int month)
+\begin{DoxyCompactList}\small\item\em Получает количество дней в заданном месяце и году. \end{DoxyCompactList}\item 
+long double \mbox{\hyperlink{s21__bank_8c_ae3b11bf6f97edc3ee7cbb7fa6af34246}{calculate\+Deposit\+Earnings}} (double initial\+Deposit, int months, double interest\+Rate, double tax\+Rate, int capitalization\+Period, int payments\+Period, double $\ast$deposits, double $\ast$withdrawals, int start\+Day, int start\+Month, int start\+Year, struct \mbox{\hyperlink{structdata}{data}} $\ast$results)
+\begin{DoxyCompactList}\small\item\em Рассчитывает доход по депозиту с учетом капитализации и начисления налога. \end{DoxyCompactList}\item 
+double $\ast$ \mbox{\hyperlink{s21__bank_8c_a693fc8ff5d34d3b6f40db3f5cd2abee5}{generate\+Deposits}} (double deposit\+Amount, int period\+Type, int total\+Months)
+\begin{DoxyCompactList}\small\item\em Генерирует массив довложений для депозита в зависимости от типа периода. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Функции для работы с банковскими расчетами. 
+
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{s21__bank_8c_aa768aabab02a59c871b1337162489f6c}\label{s21__bank_8c_aa768aabab02a59c871b1337162489f6c}} 
+\index{s21\_bank.c@{s21\_bank.c}!calculateAnnuity@{calculateAnnuity}}
+\index{calculateAnnuity@{calculateAnnuity}!s21\_bank.c@{s21\_bank.c}}
+\doxysubsubsection{\texorpdfstring{calculateAnnuity()}{calculateAnnuity()}}
+{\footnotesize\ttfamily double calculate\+Annuity (\begin{DoxyParamCaption}\item[{double}]{credit\+Sum,  }\item[{double}]{percent,  }\item[{int}]{months }\end{DoxyParamCaption})}
+
+
+
+Рассчитывает аннуитетный платеж для кредита. 
+
+Вычисляет аннуитетный платеж для кредита.
+
+
+\begin{DoxyParams}{Parameters}
+{\em credit\+Sum} & Сумма кредита. \\
+\hline
+{\em percent} & Годовая процентная ставка. \\
+\hline
+{\em months} & Количество месяцев кредита. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Аннуитетный платеж. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{s21__bank_8c_ae3b11bf6f97edc3ee7cbb7fa6af34246}\label{s21__bank_8c_ae3b11bf6f97edc3ee7cbb7fa6af34246}} 
+\index{s21\_bank.c@{s21\_bank.c}!calculateDepositEarnings@{calculateDepositEarnings}}
+\index{calculateDepositEarnings@{calculateDepositEarnings}!s21\_bank.c@{s21\_bank.c}}
+\doxysubsubsection{\texorpdfstring{calculateDepositEarnings()}{calculateDepositEarnings()}}
+{\footnotesize\ttfamily long double calculate\+Deposit\+Earnings (\begin{DoxyParamCaption}\item[{double}]{initial\+Deposit,  }\item[{int}]{months,  }\item[{double}]{interest\+Rate,  }\item[{double}]{tax\+Rate,  }\item[{int}]{capitalization\+Period,  }\item[{int}]{payments\+Period,  }\item[{double $\ast$}]{deposits,  }\item[{double $\ast$}]{withdrawals,  }\item[{int}]{start\+Day,  }\item[{int}]{start\+Month,  }\item[{int}]{start\+Year,  }\item[{struct \mbox{\hyperlink{structdata}{data}} $\ast$}]{results }\end{DoxyParamCaption})}
+
+
+
+Рассчитывает доход по депозиту с учетом капитализации и начисления налога. 
+
+Вычисляет прирост депозита с учетом начисленных процентов и уплаченных налогов.
+
+
+\begin{DoxyParams}{Parameters}
+{\em initial\+Deposit} & Начальная сумма депозита. \\
+\hline
+{\em months} & Количество месяцев. \\
+\hline
+{\em interest\+Rate} & Процентная ставка по депозиту в год. \\
+\hline
+{\em tax\+Rate} & Ставка налога на доход в процентах. \\
+\hline
+{\em capitalization\+Period} & Период капитализации (в месяцах). \\
+\hline
+{\em payments\+Period} & Период выплат (в месяцах). \\
+\hline
+{\em deposits} & Массив довложений по месяцам. \\
+\hline
+{\em withdrawals} & Массив снятий по месяцам. \\
+\hline
+{\em start\+Day} & День начала депозита. \\
+\hline
+{\em start\+Month} & Месяц начала депозита. \\
+\hline
+{\em start\+Year} & Год начала депозита. \\
+\hline
+{\em results} & Массив с результатами по месяцам. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Итоговый баланс по окончании депозита. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{s21__bank_8c_afd114b0fb7312d088929849f1963882b}\label{s21__bank_8c_afd114b0fb7312d088929849f1963882b}} 
+\index{s21\_bank.c@{s21\_bank.c}!calculateDifferentiated@{calculateDifferentiated}}
+\index{calculateDifferentiated@{calculateDifferentiated}!s21\_bank.c@{s21\_bank.c}}
+\doxysubsubsection{\texorpdfstring{calculateDifferentiated()}{calculateDifferentiated()}}
+{\footnotesize\ttfamily double calculate\+Differentiated (\begin{DoxyParamCaption}\item[{double}]{credit\+Sum,  }\item[{double}]{percent,  }\item[{int}]{months,  }\item[{int}]{current\+Month }\end{DoxyParamCaption})}
+
+
+
+Рассчитывает дифференцированный платеж для кредита. 
+
+Вычисляет дифференцированный платеж для кредита.
+
+
+\begin{DoxyParams}{Parameters}
+{\em credit\+Sum} & Сумма кредита. \\
+\hline
+{\em percent} & Годовая процентная ставка. \\
+\hline
+{\em months} & Количество месяцев кредита. \\
+\hline
+{\em current\+Month} & Текущий месяц для расчета платежа. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Дифференцированный платеж для текущего месяца. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{s21__bank_8c_a043a9c33b7a1abd8ad2a52fef2858637}\label{s21__bank_8c_a043a9c33b7a1abd8ad2a52fef2858637}} 
+\index{s21\_bank.c@{s21\_bank.c}!calculateInterest@{calculateInterest}}
+\index{calculateInterest@{calculateInterest}!s21\_bank.c@{s21\_bank.c}}
+\doxysubsubsection{\texorpdfstring{calculateInterest()}{calculateInterest()}}
+{\footnotesize\ttfamily long double calculate\+Interest (\begin{DoxyParamCaption}\item[{long double}]{balance,  }\item[{double}]{rate,  }\item[{int}]{days,  }\item[{int}]{days\+In\+Year }\end{DoxyParamCaption})}
+
+
+
+Рассчитывает начисленные проценты для заданного баланса. 
+
+Вычисляет начисленные проценты по остатку долга.
+
+
+\begin{DoxyParams}{Parameters}
+{\em balance} & Текущий баланс на счете. \\
+\hline
+{\em rate} & Процентная ставка в год. \\
+\hline
+{\em days} & Количество дней для начисления процентов. \\
+\hline
+{\em days\+In\+Year} & Количество дней в году. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Начисленные проценты. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{s21__bank_8c_a25bbc95b228e6ffd0ae49faa8baa0faf}\label{s21__bank_8c_a25bbc95b228e6ffd0ae49faa8baa0faf}} 
+\index{s21\_bank.c@{s21\_bank.c}!calculateOverpayment@{calculateOverpayment}}
+\index{calculateOverpayment@{calculateOverpayment}!s21\_bank.c@{s21\_bank.c}}
+\doxysubsubsection{\texorpdfstring{calculateOverpayment()}{calculateOverpayment()}}
+{\footnotesize\ttfamily double calculate\+Overpayment (\begin{DoxyParamCaption}\item[{double}]{total\+Payment,  }\item[{double}]{credit\+Sum }\end{DoxyParamCaption})}
+
+
+
+Рассчитывает переплату по кредиту. 
+
+Вычисляет переплату по кредиту.
+
+
+\begin{DoxyParams}{Parameters}
+{\em total\+Payment} & Общий платеж по кредиту (с учетом процентов). \\
+\hline
+{\em credit\+Sum} & Сумма кредита. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Сумма переплаты. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{s21__bank_8c_aa143449295ffcbcb4914d8df1f30c146}\label{s21__bank_8c_aa143449295ffcbcb4914d8df1f30c146}} 
+\index{s21\_bank.c@{s21\_bank.c}!calculateTax@{calculateTax}}
+\index{calculateTax@{calculateTax}!s21\_bank.c@{s21\_bank.c}}
+\doxysubsubsection{\texorpdfstring{calculateTax()}{calculateTax()}}
+{\footnotesize\ttfamily long double calculate\+Tax (\begin{DoxyParamCaption}\item[{long double}]{income,  }\item[{long double}]{untaxed\+Income,  }\item[{double}]{tax\+Rate }\end{DoxyParamCaption})}
+
+
+
+Рассчитывает сумму налога на начисленные проценты. 
+
+Вычисляет сумму налога на доход.
+
+
+\begin{DoxyParams}{Parameters}
+{\em income} & Начисленные проценты. \\
+\hline
+{\em untaxed\+Income} & Сумма начисленных процентов, не облагаемых налогом. \\
+\hline
+{\em tax\+Rate} & Ставка налога в процентах. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Сумма налога на начисленные проценты. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{s21__bank_8c_a693fc8ff5d34d3b6f40db3f5cd2abee5}\label{s21__bank_8c_a693fc8ff5d34d3b6f40db3f5cd2abee5}} 
+\index{s21\_bank.c@{s21\_bank.c}!generateDeposits@{generateDeposits}}
+\index{generateDeposits@{generateDeposits}!s21\_bank.c@{s21\_bank.c}}
+\doxysubsubsection{\texorpdfstring{generateDeposits()}{generateDeposits()}}
+{\footnotesize\ttfamily double $\ast$ generate\+Deposits (\begin{DoxyParamCaption}\item[{double}]{deposit\+Amount,  }\item[{int}]{period\+Type,  }\item[{int}]{total\+Months }\end{DoxyParamCaption})}
+
+
+
+Генерирует массив довложений для депозита в зависимости от типа периода. 
+
+Генерирует массив сумм депозитов для каждого периода начисления процентов.
+
+
+\begin{DoxyParams}{Parameters}
+{\em deposit\+Amount} & Сумма довложения. \\
+\hline
+{\em period\+Type} & Тип периода (1 -\/ ежемесячно, 6 -\/ каждые 6 месяцев, 12 -\/ ежегодно). \\
+\hline
+{\em total\+Months} & Общее количество месяцев. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Указатель на массив довложений. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{s21__bank_8c_a8cdc3c1eec21aafc95b9cc088133f396}\label{s21__bank_8c_a8cdc3c1eec21aafc95b9cc088133f396}} 
+\index{s21\_bank.c@{s21\_bank.c}!getDaysInMonth@{getDaysInMonth}}
+\index{getDaysInMonth@{getDaysInMonth}!s21\_bank.c@{s21\_bank.c}}
+\doxysubsubsection{\texorpdfstring{getDaysInMonth()}{getDaysInMonth()}}
+{\footnotesize\ttfamily int get\+Days\+In\+Month (\begin{DoxyParamCaption}\item[{int}]{year,  }\item[{int}]{month }\end{DoxyParamCaption})}
+
+
+
+Получает количество дней в заданном месяце и году. 
+
+Получает количество дней в указанном месяце и году.
+
+
+\begin{DoxyParams}{Parameters}
+{\em year} & Год. \\
+\hline
+{\em month} & Месяц (1-\/12). \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Количество дней в месяце. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{s21__bank_8c_ae2f7c9a7e17225bac3e3f9a506b8a829}\label{s21__bank_8c_ae2f7c9a7e17225bac3e3f9a506b8a829}} 
+\index{s21\_bank.c@{s21\_bank.c}!isLeapYear@{isLeapYear}}
+\index{isLeapYear@{isLeapYear}!s21\_bank.c@{s21\_bank.c}}
+\doxysubsubsection{\texorpdfstring{isLeapYear()}{isLeapYear()}}
+{\footnotesize\ttfamily int is\+Leap\+Year (\begin{DoxyParamCaption}\item[{int}]{year }\end{DoxyParamCaption})}
+
+
+
+Проверяет, является ли заданный год високосным. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em year} & Год. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+1, если год високосный, иначе 0. 
+\end{DoxyReturn}

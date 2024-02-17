@@ -1,0 +1,48 @@
+\hypertarget{s21__bank_8h_source}{}\doxysection{s21\+\_\+bank.\+h}
+\label{s21__bank_8h_source}\index{/home/Nebomoe/CLionProjects/C7\_SmartCalc\_v1.0-\/1/src/s21\_bank.h@{/home/Nebomoe/CLionProjects/C7\_SmartCalc\_v1.0-\/1/src/s21\_bank.h}}
+\mbox{\hyperlink{s21__bank_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#include\ <math.h>}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#include\ <stdio.h>}}
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ <stdlib.h>}}
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ <string.h>}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ <time.h>}}
+\DoxyCodeLine{00006\ }
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#ifndef\ C7\_SMARTCALC\_V1\_0\_1\_S21\_CREDIT\_H}}
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#define\ C7\_SMARTCALC\_V1\_0\_1\_S21\_CREDIT\_H}}
+\DoxyCodeLine{00009\ }
+\DoxyCodeLine{00018\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structdata}{data}}\ \{}
+\DoxyCodeLine{00019\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{structdata_a7106e2abc437ad981830d14176d15f09}{number}};\ }
+\DoxyCodeLine{00020\ \ \ \ \ \textcolor{keywordtype}{long}\ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{structdata_a761a9c18af4a336cd069d8e882c4c852}{interest}};\ }
+\DoxyCodeLine{00021\ \ \ \ \ \textcolor{keywordtype}{long}\ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{structdata_adc024247a8d9a216a3ce1310ed0d114e}{tax}};\ }
+\DoxyCodeLine{00022\ \ \ \ \ \textcolor{keywordtype}{long}\ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{structdata_aeddcfcafeea38483d6f07dc6fcf638ef}{deposits}};\ }
+\DoxyCodeLine{00023\ \ \ \ \ \textcolor{keywordtype}{long}\ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{structdata_a1dbf20cb89b4a25063b887973b3a2b44}{withdrawals}};\ }
+\DoxyCodeLine{00024\ \ \ \ \ \textcolor{keywordtype}{long}\ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{structdata_a6c58c9231e9e645eb834ceb68c83a901}{sum}};\ }
+\DoxyCodeLine{00025\ \};}
+\DoxyCodeLine{00026\ }
+\DoxyCodeLine{00035\ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{s21__bank_8h_aa768aabab02a59c871b1337162489f6c}{calculateAnnuity}}(\textcolor{keywordtype}{double}\ creditSum,\ \textcolor{keywordtype}{double}\ percent,\ \textcolor{keywordtype}{int}\ months);}
+\DoxyCodeLine{00036\ }
+\DoxyCodeLine{00044\ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{s21__bank_8h_a25bbc95b228e6ffd0ae49faa8baa0faf}{calculateOverpayment}}(\textcolor{keywordtype}{double}\ totalPayment,\ \textcolor{keywordtype}{double}\ creditSum);}
+\DoxyCodeLine{00045\ }
+\DoxyCodeLine{00055\ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{s21__bank_8h_afd114b0fb7312d088929849f1963882b}{calculateDifferentiated}}(\textcolor{keywordtype}{double}\ creditSum,\ \textcolor{keywordtype}{double}\ percent,\ \textcolor{keywordtype}{int}\ months,}
+\DoxyCodeLine{00056\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ currentMonth);}
+\DoxyCodeLine{00057\ }
+\DoxyCodeLine{00067\ \textcolor{keywordtype}{long}\ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{s21__bank_8h_a043a9c33b7a1abd8ad2a52fef2858637}{calculateInterest}}(\textcolor{keywordtype}{long}\ \textcolor{keywordtype}{double}\ balance,\ \textcolor{keywordtype}{double}\ rate,\ \textcolor{keywordtype}{int}\ days,}
+\DoxyCodeLine{00068\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ daysInYear);}
+\DoxyCodeLine{00069\ }
+\DoxyCodeLine{00078\ \textcolor{keywordtype}{long}\ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{s21__bank_8h_aa143449295ffcbcb4914d8df1f30c146}{calculateTax}}(\textcolor{keywordtype}{long}\ \textcolor{keywordtype}{double}\ income,\ \textcolor{keywordtype}{long}\ \textcolor{keywordtype}{double}\ untaxedIncome,}
+\DoxyCodeLine{00079\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{double}\ taxRate);}
+\DoxyCodeLine{00080\ }
+\DoxyCodeLine{00088\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{s21__bank_8h_a8cdc3c1eec21aafc95b9cc088133f396}{getDaysInMonth}}(\textcolor{keywordtype}{int}\ year,\ \textcolor{keywordtype}{int}\ month);}
+\DoxyCodeLine{00089\ }
+\DoxyCodeLine{00107\ \textcolor{keywordtype}{long}\ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{s21__bank_8h_ae3b11bf6f97edc3ee7cbb7fa6af34246}{calculateDepositEarnings}}(\textcolor{keywordtype}{double}\ initialDeposit,\ \textcolor{keywordtype}{int}\ months,}
+\DoxyCodeLine{00108\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{double}\ interestRate,\ \textcolor{keywordtype}{double}\ taxRate,}
+\DoxyCodeLine{00109\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ capitalizationPeriod,\ \textcolor{keywordtype}{int}\ paymentsPeriod,\ \textcolor{keywordtype}{double}\ *deposits,}
+\DoxyCodeLine{00110\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{double}\ *withdrawals,\ \textcolor{keywordtype}{int}\ startDay,\ \textcolor{keywordtype}{int}\ startMonth,}
+\DoxyCodeLine{00111\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ startYear,\ \textcolor{keyword}{struct}\ \mbox{\hyperlink{structdata}{data}}\ *results);}
+\DoxyCodeLine{00112\ }
+\DoxyCodeLine{00121\ \textcolor{keywordtype}{double}\ *\mbox{\hyperlink{s21__bank_8h_a693fc8ff5d34d3b6f40db3f5cd2abee5}{generateDeposits}}(\textcolor{keywordtype}{double}\ depositAmount,\ \textcolor{keywordtype}{int}\ periodType,\ \textcolor{keywordtype}{int}\ totalMonths);}
+\DoxyCodeLine{00122\ }
+\DoxyCodeLine{00123\ \textcolor{preprocessor}{\#endif\ \ }\textcolor{comment}{//\ C7\_SMARTCALC\_V1\_0\_1\_S21\_CREDIT\_H}}
+
+\end{DoxyCode}
